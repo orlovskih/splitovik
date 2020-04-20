@@ -26,5 +26,3 @@ for i in range(priceData.shape[0]):
         #priceDataString[i-1] это каталог
 
     print(priceDataString[i])
-
-
