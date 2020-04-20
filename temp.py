@@ -8,8 +8,20 @@ wcapi = API(
     version="wc/v3"
 )
 
-print(wcapi.get("").json())
-print()
-print(wcapi.get("products").json())
-print()
+#print(wcapi.get("products").json())
+#print()
+
+price = '333'
+#id_prod = 2126
+id_prod = 'X4734166'
+str_id_prod = 'products/'+str(id_prod)
+
+print(str_id_prod)
+data = {
+    "regular_price": price
+}
+print(wcapi.get(str_id_prod).json())
+print('111')
+wcapi.put(str_id_prod, data)
+
 print(wcapi.get("products/2126").json())
